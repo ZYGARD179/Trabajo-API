@@ -1,0 +1,19 @@
+footer {
+  background-color: #343a40; /* Gris oscuro, elegante y neutro */
+  color: #f8f9fa;           /* Texto blanco/gris claro para contraste */
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  border-top: 2px solid #0d6efd; /* Azul del navbar para coherencia */
+  font-size: 14px;
+}
+
+footer a {
+  color: #0d6efd; /* Azul principal, armoniza con navbar */
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #0b5ed7; /* Azul más oscuro al pasar el mouse */
+  text-decoration: underline;
+}

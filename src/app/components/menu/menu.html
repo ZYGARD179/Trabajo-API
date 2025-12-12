@@ -1,0 +1,105 @@
+<div class="container mt-5">
+
+  <!-- Título principal -->
+  <div class="text-center mb-4">
+    <h1 class="display-4">Explora el Mundo de los Videojuegos</h1>
+    <p class="lead">
+      Los videojuegos son una ventana a mundos increíbles, llenos de aventuras, desafíos
+      y creatividad. Cada género ofrece experiencias únicas para todos los gustos.
+    </p>
+  </div>
+
+  <!-- Sección de géneros destacados -->
+  <div class="text-center mb-5">
+    <h3>Nos enfocamos en tres géneros principales</h3>
+    <p>Acción, RPG e Indie: tres mundos diferentes, tres formas de disfrutar los videojuegos.</p>
+  </div>
+
+  <!-- Tarjetas de géneros -->
+  <div class="row justify-content-center">
+    <!-- Acción -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm border-primary">
+        <img src="../../../assets/imagenes/index/Accion.jpg" class="card-img-top" alt="Acción">
+        <div class="card-body">
+          <h5 class="card-title">Acción</h5>
+          <p class="card-text">
+            Juegos intensos que combinan reflejos rápidos, combates emocionantes y aventuras.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RPG -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm border-success">
+        <img src="../../../assets/imagenes/index/rpg.jfif" class="card-img-top" alt="RPG">
+        <div class="card-body">
+          <h5 class="card-title">RPG</h5>
+          <p class="card-text">
+            Sumérgete en mundos extensos, desarrolla personajes y vive historias épicas.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Indie -->
+    <div class="col-md-4 mb-4">
+      <div class="card h-100 shadow-sm border-warning">
+        <img src="../../../assets/imagenes/index/indie.jfif" class="card-img-top" alt="Indie">
+        <div class="card-body">
+          <h5 class="card-title">Indie</h5>
+          <p class="card-text">
+            Juegos independientes llenos de creatividad, arte único e innovación.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 🔍 BUSCADOR POR GÉNERO -->
+  <div class="mt-5">
+    <h3 class="text-center mb-4">Buscar juegos por género</h3>
+
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-4">
+        <select class="form-select" [(ngModel)]="generoSeleccionado">
+          <option value="" disabled selected>Seleccione un género</option>
+          <option value="action">Acción</option>
+          <option value="rpg">RPG</option>
+          <option value="indie">Indie</option>
+          <option value="adventure">Aventura</option>
+          <option value="strategy">Estrategia</option>
+          <option value="simulation">Simulación</option>
+          <option value="sports">Deportes</option>
+        </select>
+      </div>
+
+      <div class="col-md-2">
+        <button class="btn btn-primary w-100" (click)="buscarGenero()">
+          Buscar
+        </button>
+      </div>
+    </div>
+
+    <!-- Resultados -->
+    <div class="row" *ngIf="resultados.length > 0">
+      <h4 class="mb-3 text-center">Resultados para: {{ generoSeleccionado }}</h4>
+
+      <div class="col-md-4 mb-4" *ngFor="let juego of resultados">
+        <div class="card h-100 shadow-sm">
+          <img [src]="juego.background_image" class="card-img-top" [alt]="juego.name">
+          <div class="card-body">
+            <h5 class="card-title">{{ juego.name }}</h5>
+            <p class="card-text">
+              Rating: {{ juego.rating }} ⭐
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>

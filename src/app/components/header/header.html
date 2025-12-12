@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Videojuegos App</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <!-- Inicio / Biografía -->
+        <a
+          class="nav-link"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }">
+          ¿Que es un juego?
+        </a>
+
+        <!-- Accion -->
+        <a
+          class="nav-link"
+          routerLink="/juego"
+          routerLinkActive="active">
+          Accion
+        </a>
+
+        <!-- RPG -->
+        <a
+          class="nav-link"
+          routerLink="/logro"
+          routerLinkActive="active">
+          RPG
+        </a>
+
+        <!-- Indie -->
+        <a
+          class="nav-link"
+          routerLink="/reco"
+          routerLinkActive="active">
+          Indie
+        </a>
+
+        <!-- Contactarnos -->
+        <a
+          class="nav-link"
+          routerLink="/acerca"
+          routerLinkActive="active">
+          Contactarnos
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>

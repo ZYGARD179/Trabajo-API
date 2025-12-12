@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <h2 class="text-center mb-4">Top 5 Juegos RPG</h2>
+  <div class="row">
+    <div class="col-md-6 col-lg-4 mb-4" *ngFor="let juego of juegosRpg">
+      <div class="card h-100 shadow-sm">
+        <img [src]="juego.background_image" class="card-img-top" [alt]="juego.name">
+
+        <div class="card-body">
+          <h5 class="card-title">{{ juego.name }}</h5>
+          <p class="card-text">
+            Rating: {{ juego.rating }} ⭐<br>
+            Lanzamiento: {{ juego.released }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
